@@ -11,14 +11,14 @@ There will be less variety in the recommendations in this situation, but it will
 ## Output
 User Input = 'batman'<br/>
 Recommended = ['batman returns',<br/>
-             'raiders of the lost ark',<br/>
-             'batman forever',<br/>
-             'the legend of the lone ranger',<br/>
-             'flash gordon',<br/>
-             'the rock',<br/>
-             'superman iv: the quest for peace',<br/>
-             'falcon rising',<br/>
-             'transformers',<br/>
-             'the omega code']<br/>
+           <t/>  'raiders of the lost ark',<br/>
+           <t/>  'batman forever',<br/>
+            <t/> 'the legend of the lone ranger',<br/>
+            <t/> 'flash gordon',<br/>
+            <t/> 'the rock',<br/>
+            <t/> 'superman iv: the quest for peace',<br/>
+            <t/> 'falcon rising',<br/>
+             <t/>'transformers',<br/>
+            <t/> 'the omega code']<br/>
 
 
