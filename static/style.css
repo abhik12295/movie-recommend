@@ -1,0 +1,111 @@
+.Credits {
+            margin-top: 20px;
+            width: 100vw;
+            text-align: center;
+            float: left;
+            color: white;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-weight: 100;
+            font-size: 1.3rem;
+        }
+
+.footer {
+	text-color: #e4e0e0;
+	text-align:center;
+	clear:both;
+	float:left;
+	position: relative;
+    bottom: 0px;
+ 	margin-top: 40px;
+ 	width: 100vw;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+h1 a:hover {
+    color: #FD6C6C;
+ }
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 32px;
+    top: -48px;
+    font-weight: 600;
+    margin-top: 30px;
+ }
+
+
+.movie {
+    	color: #fff;
+    	margin-left: auto;
+    	margin-right: auto;
+	    resize: none;
+    }
+
+.btn-block{
+    	width: 15%;
+    	text-align: center;
+    	margin-left: auto;
+    	margin-right: auto;
+    	color: #FD6C6C;
+    }
+
+#content {
+    	background-image: url("../static/image.jpg");
+    	background-repeat: no-repeat;
+	    font-family: 'Noto Sans JP', sans-serif;
+	    background-size: cover;
+        min-height: 100vh;
+        display: cover;
+        align-items: center;
+        justify-content: center;
+   }
+
+
+.footer {
+  		color: #e4e0e0;
+  		text-align:right;
+  		margin-top: auto;
+       	right: 20px;
+       	width: 100%;
+  }
+
+
+
+#autoComplete {
+      background-position: 780px ;
+    }
+
+
+.github-corner:hover .octo-arm{
+animation:octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {0%,100%
+{
+transform:rotate(0)
+}
+20%,60%
+{
+transform:rotate(-25deg)
+}
+40%,80%
+{
+transform:rotate(10deg)
+}
+}
+@media (max-width:500px){
+.github-corner:hover
+.octo-arm{animation:none}
+.github-corner
+.octo-arm{
+animation:octocat-wave 560ms ease-in-out
+}
+}
