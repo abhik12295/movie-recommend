@@ -6,3 +6,19 @@ There will be less variety in the recommendations in this situation, but it will
 
 
 ![content](https://user-images.githubusercontent.com/17993648/126546196-d0b2101a-b40a-4cce-be6b-86ba9c7d9423.png)
+
+
+## Output
+User Input = 'batman'
+Recommended = ['batman returns',
+             'raiders of the lost ark',
+             'batman forever',
+             'the legend of the lone ranger',
+             'flash gordon',
+             'the rock',
+             'superman iv: the quest for peace',
+             'falcon rising',
+             'transformers',
+             'the omega code']
+
+
