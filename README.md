@@ -9,16 +9,16 @@ There will be less variety in the recommendations in this situation, but it will
 
 
 ## Output
-User Input = 'batman'
-Recommended = ['batman returns',
-             'raiders of the lost ark',
-             'batman forever',
-             'the legend of the lone ranger',
-             'flash gordon',
-             'the rock',
-             'superman iv: the quest for peace',
-             'falcon rising',
-             'transformers',
-             'the omega code']
+User Input = 'batman'<br/>
+Recommended = ['batman returns',<br/>
+             'raiders of the lost ark',<br/>
+             'batman forever',<br/>
+             'the legend of the lone ranger',<br/>
+             'flash gordon',<br/>
+             'the rock',<br/>
+             'superman iv: the quest for peace',<br/>
+             'falcon rising',<br/>
+             'transformers',<br/>
+             'the omega code']<br/>
 
 
