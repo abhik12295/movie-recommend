@@ -18,8 +18,8 @@ def rcmd(movie):
     movie = movie.lower()
     # check if data and sim are already assigned
     try:
-        cos_similarity().data.head()
-        cos_similarity().sim.shape
+        data.head()
+        sim.shape
 
     except:
         data, sim = cos_similarity()
