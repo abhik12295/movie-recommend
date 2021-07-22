@@ -16,7 +16,7 @@ def cos_similarity():
 
 def rcmd(movie):
     movie = movie.lower()
-    # check if data and sim are already assigned
+
     data, sim = cos_similarity()
 
     # check if the movie is in our database or not

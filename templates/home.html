@@ -17,27 +17,6 @@
     <link rel= "script" type= "text/javascript" href= "{{ url_for('static',filename='autoComplete.js') }}">
 </head>
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "final_data.csv",
-        dataType: "text",
-        success: function(data) {
-        processData(data);
-        }
-     });
-     function processData(data){
-     var films = []
-     var lines = data.split("\n"):
-     for (var i = 0; i < lines.length; i++) {
-       var _firstColumn = lines[i].split(",")[0];     //First column (Split on the separator!)
-        films.push(_firstColumn)
-    }
-     }
-</script>
-
 <body id="content">
 <div class="ml-container" style="display: block;">
 		<a href="https://github.com/abhik12295" class="github-corner" aria-label="View source on GitHub">
@@ -78,7 +57,6 @@
 	</div>
 
 	<div class="results">
-
 		{% block content %}
         {% endblock %}
 	</div>
