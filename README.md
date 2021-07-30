@@ -25,3 +25,7 @@ Recommended = <br/>['batman returns',<br/>
              'the omega code']<br/>
 
 
+#### Result on website:
+
+![movie_rec](https://user-images.githubusercontent.com/17993648/127717039-588baa9b-1e14-423f-ad05-9e5c910d3dde.jpg)
+
