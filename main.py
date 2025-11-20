@@ -1,51 +1,78 @@
 import pandas as pd
+import pickle
 from flask import Flask, render_template, request
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+data = pickle.load(open("movies.pkl", "rb"))
+sim = pickle.load(open("similarity.pkl", "rb"))
+print("Loaded successfully!")
 
-def cos_similarity():
-    data = pd.read_csv('final_data.csv')
-    # creating a count matrix
-    cv = CountVectorizer()
-    count_matrix = cv.fit_transform(data['comb'])
-    # creating a similarity score matrix
-    sim = cosine_similarity(count_matrix)
-    return data, sim
+# def cos_similarity():
+#     data = pd.read_csv('final_data.csv')
+#     # creating a count matrix
+#     cv = CountVectorizer()
+#     count_matrix = cv.fit_transform(data['comb'])
+#     # creating a similarity score matrix
+#     sim = cosine_similarity(count_matrix)
+#     return data, sim
+
+
+# def rcmd(movie):
+#     movie = movie.lower()
+
+#     data, sim = cos_similarity()
+
+#     # check if the movie is in our database or not
+#     if movie not in data['movie_title'].unique():
+#         return 'Sorry! This movie is not in our database. Please check the spelling or try with some other movies'
+#     else:
+#         # getting the index of the movie in the dataframe
+#         i = data.loc[data['movie_title'] == movie].index[0]
+
+#         # fetching the row containing similarity scores of the movie
+#         # from similarity matrix and enumerate it
+#         lst = list(enumerate(sim[i]))
+
+#         # sorting this list in decreasing order based on the similarity score
+#         lst = sorted(lst, key=lambda x: x[1], reverse=True)
+
+#         # taking top 1- movie scores
+#         # not taking the first index since it is the same movie
+#         lst = lst[1:11]
+
+#         # making an empty list that will containing all 10 movie recommendations
+#         recommended = []
+#         for i in range(len(lst)):
+#             a = lst[i][0]
+#             recommended.append(data['movie_title'][a])
+#         return recommended
+
+
+app = Flask(__name__)
 
 
 def rcmd(movie):
     movie = movie.lower()
 
-    data, sim = cos_similarity()
-
-    # check if the movie is in our database or not
+    # check if the movie is in our database
     if movie not in data['movie_title'].unique():
         return 'Sorry! This movie is not in our database. Please check the spelling or try with some other movies'
-    else:
-        # getting the index of the movie in the dataframe
-        i = data.loc[data['movie_title'] == movie].index[0]
+    
+    # index of the movie
+    i = data.loc[data['movie_title'] == movie].index[0]
 
-        # fetching the row containing similarity scores of the movie
-        # from similarity matrix and enumerate it
-        lst = list(enumerate(sim[i]))
+    # similarity row
+    lst = list(enumerate(sim[i]))
 
-        # sorting this list in decreasing order based on the similarity score
-        lst = sorted(lst, key=lambda x: x[1], reverse=True)
+    # sort
+    lst = sorted(lst, key=lambda x: x[1], reverse=True)[1:11]
 
-        # taking top 1- movie scores
-        # not taking the first index since it is the same movie
-        lst = lst[1:11]
+    # get recommendations
+    recommended = [data['movie_title'][a] for a, _ in lst]
 
-        # making an empty list that will containing all 10 movie recommendations
-        recommended = []
-        for i in range(len(lst)):
-            a = lst[i][0]
-            recommended.append(data['movie_title'][a])
-        return recommended
+    return recommended
 
-
-app = Flask(__name__)
 
 
 @app.route("/")
