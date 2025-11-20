@@ -66,5 +66,5 @@ def recommend():
         return render_template('recommend.html', movie=movie, r=r, t='l')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
